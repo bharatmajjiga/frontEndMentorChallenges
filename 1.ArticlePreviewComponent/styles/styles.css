@@ -1,0 +1,165 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+}
+
+body {
+    width: 50%;
+    margin: 150px auto;
+    min-height: 40vh;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.container {
+    display: flex;
+    min-height: 30vh;
+    border-radius: 40px;    
+    position: relative;
+}
+
+.left-section {
+    flex: 2;
+    border-radius: 40px;
+    display: block;
+}
+
+.left-section img {    
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    max-width: 100%;
+    min-height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.right-section {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.right-section .heading {
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+    line-height: 35px;
+    color: hsl(217, 19%, 35%);
+}
+
+.right-section .content {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    line-height: 25px;
+    color: hsl(214, 17%, 51%);
+}
+
+.profile-share {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.profile-share .profile img {
+    width: 50px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.profile-share .profile {    
+    align-self: center;
+    flex: 1;
+}
+
+.profile-share .article-details {
+    margin-left: 20px;
+    line-height: 25px;
+    flex: 3;
+}
+
+.profile-share .article-details .article-author-name {
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    font-family: 'Manrope', sans-serif;
+}
+
+.profile-share .article-details .article-date {
+    color: hsl(214, 17%, 51%)
+}
+
+.profile-share .article-share .share-btn {
+    margin-top: 10px;
+    border-radius: 25px;
+    background-color: hsl(210, 46%, 95%);
+    color: hsl(214, 17%, 51%);
+    width: 50px;
+    height: 45px;
+    padding: 15px;    
+    float: right;
+    cursor: pointer;
+}
+
+.profile-share .article-share {    
+    flex: 4;
+}   
+
+.tooltip {
+    position: absolute;
+    z-index: 10;
+    display: none;
+    min-width: 350px;
+    min-height: 70px;
+    top: 160px;
+    right: -100px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 10px;
+    padding-right: 20px;
+}
+
+.tooltip span {
+    flex: 2;
+    z-index: 10;
+    text-transform: uppercase;
+    margin-left: 30px;
+    letter-spacing: 5px;
+    color: hsl(214, 17%, 51%);
+}
+
+
+.tooltip span:last-of-type {
+    display: block;
+    background-color: hsl(217, 19%, 35%);
+}
+
+.tooltip img {
+    z-index: 10;
+    flex: 1;
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        display: block;
+    }       
+    
+    .tooltip {
+        top: auto;
+        min-width: 308px;
+        bottom: -24px;
+        right: -2px;
+        border-radius: 0px;
+    }
+}
